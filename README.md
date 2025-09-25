@@ -11,6 +11,7 @@ A simple package that contains a systemd script that runs before sleep and after
 This was created and tested specifically with the MSI Stealth 16 AI A1VGG Notebook.
 
 ## Environment Information
+
 For details about the system this was built and tested for.
 
 - Notebook: MSI Stealth 16 AI
@@ -26,25 +27,25 @@ For my particular system, I simply did the following:
 
 1. Build the package using rpmbuild
 
-  ```sh
-  rpmbuild -bb ./wifi-fixes-msi.spec
-  ```
+    ```sh
+    rpmbuild -bb ./wifi-fixes-msi.spec
+    ```
 
-2. Navigated to the output directory
+2. Navigate to the output directory
 
-  ```sh
-  # For my case it was here
-  cd $HOME/rpmbuild/RPMS/x86_x64/wifi-fixes-msi-1.0-1.x86_64.rpm
-  ```
-   
-4. Installed the package using rpm-ostree
+    ```sh
+    # For my case it was here
+    cd $HOME/rpmbuild/RPMS/x86_x64/wifi-fixes-msi-1.0-1.x86_64.rpm
+    ```
+
+3. Installed the package using rpm-ostree
   
-  ```sh
-  rpm-ostree install wifi-fixes-msi-1.0-1.x86_64.rpm
-  ```
+    ```sh
+    rpm-ostree install wifi-fixes-msi-1.0-1.x86_64.rpm
+    ```
 
-5. Reboot the System
+4. Reboot the System
 
-  ```sh
-  systemctl reboot
-  ```
+    ```sh
+    systemctl reboot
+    ```
