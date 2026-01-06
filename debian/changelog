@@ -1,0 +1,29 @@
+wifi-fixes-msi (2.1-1) UNRELEASED; urgency=low
+
+  * Added Debian/Ubuntu packaging support
+  * Created debian/* packaging files (control, rules, changelog, copyright)
+  * Added changelog generation script for synchronisation
+  * Reorganised project structure with rpm/ and debian/ directories
+  * Renamed build scripts for clarity (build-rpm.sh, init-rpm.sh)
+
+ -- Francis Villarba <hello@francisvillarba.com>  Tue, 06 Jan 2026 18:53:34 +0800
+
+wifi-fixes-msi (2.0-1) UNRELEASED; urgency=low
+
+  * Migration to iwlmld as per Kernel 6.6+ (and bazzite 42+)
+  * Set modprobe configurations for Wi-Fi
+  * Overhauled the entire build spec for RPMBuild
+
+ -- Francis Villarba <hello@francisvillarba.com>  Thu, 25 Sep 2025 12:00:00 +0000
+
+wifi-fixes-msi (1.0-2) UNRELEASED; urgency=low
+
+  * Repository maintenance release only, no changes to the package otherwise.
+
+ -- Francis Villarba <hello@francisvillarba.com>  Thu, 25 Sep 2025 12:00:00 +0000
+
+wifi-fixes-msi (1.0-1) UNRELEASED; urgency=low
+
+  * Initial Release
+
+ -- Francis Villarba <hello@francisvillarba.com>  Mon, 10 Mar 2025 12:00:00 +0000

@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	install -D -m 644 BUILDROOT/etc/modprobe.d/iwlwifi.conf \
+		debian/wifi-fixes-msi/etc/modprobe.d/iwlwifi.conf
+	install -D -m 644 BUILDROOT/etc/modprobe.d/iwlmld.conf \
+		debian/wifi-fixes-msi/etc/modprobe.d/iwlmld.conf
+	install -D -m 755 BUILDROOT/usr/lib/systemd/system-sleep/iwlwifi \
+		debian/wifi-fixes-msi/usr/lib/systemd/system-sleep/iwlwifi
+
+override_dh_auto_build:
+	# Nothing to build - data-only package
+
+override_dh_auto_test:
+	# No tests to run
+
+override_dh_usrlocal:
+	# Skip /usr/local checks as we don't install there

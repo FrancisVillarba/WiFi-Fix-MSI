@@ -1,0 +1,25 @@
+Source: wifi-fixes-msi
+Section: admin
+Priority: optional
+Maintainer: Francis Villarba <hello@francisvillarba.com>
+Build-Depends: debhelper-compat (= 13), bash
+Standards-Version: 4.6.2.1
+Rules-Requires-Root: no
+Homepage: https://github.com/FrancisVillarba/WiFi-Fix-MSI
+Vcs-Browser: https://github.com/FrancisVillarba/WiFi-Fix-MSI
+Vcs-Git: https://github.com/FrancisVillarba/WiFi-Fix-MSI.git
+
+Package: wifi-fixes-msi
+Architecture: all
+Depends: ${misc:Depends}, bash, kmod, systemd
+Description: systemd script that fixes Intel BE1750 WiFi card issues
+ A simple package that contains a systemd script that runs before sleep and
+ after wake in order to fix issues with iwlwifi driver crash looping when
+ resuming from sleep on Intel BE1750 Class WiFi Cards.
+ .
+ Also contains changes to configuration for better performance and reliability,
+ at the cost of battery life.
+ .
+ This was created and tested specifically with the MSI Stealth 16 AI A1VGG
+ Notebook on Bazzite 42+ and ported to Debian/Ubuntu systems running on the
+ same specific Notebook.

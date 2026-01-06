@@ -1,5 +1,5 @@
 Name:             wifi-fixes-msi
-Version:          2.0
+Version:          2.1
 Release:          1
 Summary:          systemd script that fixes sleep wake issues for Intel BE1750 Class WiFi cards
 
@@ -50,6 +50,14 @@ chmod 644 %{buildroot}/etc/modprobe.d/iwlmld.conf
 /etc/modprobe.d/iwlwifi.conf
 
 %changelog
+
+* Tue Jan 06 2026 Francis Villarba <hello@francisvillarba.com> 2.1-1
+
+- Added Debian/Ubuntu packaging support
+- Created debian/* packaging files (control, rules, changelog, copyright)
+- Added changelog generation script for synchronisation
+- Reorganised project structure with rpm/ and debian/ directories
+- Renamed build scripts for clarity (build-rpm.sh, init-rpm.sh)
 
 * Thu Sep 25 2025 Francis Villarba <hello@francisvillarba.com> 2.0-1
 
