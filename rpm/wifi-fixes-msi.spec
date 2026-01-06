@@ -61,14 +61,24 @@ chmod 644 %{buildroot}/etc/modprobe.d/iwlmld.conf
 
 * Thu Sep 25 2025 Francis Villarba <hello@francisvillarba.com> 2.0-1
 
-- Migration to iwlmld as per Kernel 6.6+ (and bazzite 42+)
-- Set modprobe configurations for Wi-Fi
-- Overhauled the entire build spec for RPMBuild
+- WiFi configuration settings via modprobe.d for stability and
+- tools/init.sh script to initialize development environment with distrobox.
+- tools/build.sh script for automated RPM building using distrobox.
+- All references to iwlmvm changed to iwlmld to match Kernel 6.6+ driver changes
+- Repository structure: BUILDROOT reorganised from versioned subdirectories to a
+- RPM spec file updated to copy files from simplified BUILDROOT structure and
+- Build process streamlined with automated tools/build.sh script.
+- Package version incremented to 2.0 to reflect breaking changes.
 
 * Thu Sep 25 2025 Francis Villarba <hello@francisvillarba.com> 1.0-2
 
-- Repository maintenance release only, no changes to the package otherwise.
+- CHANGELOG.md for a more human friendly history of changes.
+- VSCode specific extension recommendations and settings.
+- .markdownlint.json to ensure we match the "Keep a changelog" schema.
+- README.md formatting to be in-line with conventions & specifications for markdown.
+- SOURCES.md for the same reasons as above, in addition to adding
+- Various spelling mistakes fixed.
 
 * Mon Mar 10 2025 Francis Villarba <hello@francisvillarba.com> 1.0-1
 
-- Initial Release
+- Initial Release.

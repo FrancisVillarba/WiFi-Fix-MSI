@@ -6,24 +6,35 @@ wifi-fixes-msi (2.1-1) UNRELEASED; urgency=low
   * Reorganised project structure with rpm/ and debian/ directories
   * Renamed build scripts for clarity (build-rpm.sh, init-rpm.sh)
 
- -- Francis Villarba <hello@francisvillarba.com>  Tue, 06 Jan 2026 18:53:34 +0800
+ -- Francis Villarba <hello@francisvillarba.com>  Tue, 06 Jan 2026 00:00:00 +0800
 
 wifi-fixes-msi (2.0-1) UNRELEASED; urgency=low
 
-  * Migration to iwlmld as per Kernel 6.6+ (and bazzite 42+)
-  * Set modprobe configurations for Wi-Fi
-  * Overhauled the entire build spec for RPMBuild
+  * WiFi configuration settings via modprobe.d for stability and
+  * tools/init.sh script to initialize development environment with distrobox.
+  * tools/build.sh script for automated RPM building using distrobox.
+  * All references to iwlmvm changed to iwlmld to match Kernel 6.6+ driver changes
+  * Repository structure: BUILDROOT reorganised from versioned subdirectories to a
+  * RPM spec file updated to copy files from simplified BUILDROOT structure and
+  * Build process streamlined with automated tools/build.sh script.
+  * Package version incremented to 2.0 to reflect breaking changes.
 
- -- Francis Villarba <hello@francisvillarba.com>  Thu, 25 Sep 2025 12:00:00 +0000
+ -- Francis Villarba <hello@francisvillarba.com>  Thu, 25 Sep 2025 00:00:00 +0800
 
 wifi-fixes-msi (1.0-2) UNRELEASED; urgency=low
 
-  * Repository maintenance release only, no changes to the package otherwise.
+  * CHANGELOG.md for a more human friendly history of changes.
+  * VSCode specific extension recommendations and settings.
+  * .markdownlint.json to ensure we match the "Keep a changelog" schema.
+  * README.md formatting to be in-line with conventions & specifications for markdown.
+  * SOURCES.md for the same reasons as above, in addition to adding
+  * Various spelling mistakes fixed.
 
- -- Francis Villarba <hello@francisvillarba.com>  Thu, 25 Sep 2025 12:00:00 +0000
+ -- Francis Villarba <hello@francisvillarba.com>  Thu, 25 Sep 2025 00:00:00 +0800
 
 wifi-fixes-msi (1.0-1) UNRELEASED; urgency=low
 
-  * Initial Release
+  * Initial Release.
 
- -- Francis Villarba <hello@francisvillarba.com>  Mon, 10 Mar 2025 12:00:00 +0000
+ -- Francis Villarba <hello@francisvillarba.com>  Mon, 10 Mar 2025 00:00:00 +0800
+
