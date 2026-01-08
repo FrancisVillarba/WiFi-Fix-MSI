@@ -36,13 +36,22 @@ docker run --rm \
     echo 'Building DEB package...'
     dpkg-buildpackage -us -uc -b
 
+    # Create BUILD directory if it doesn't exist
+    mkdir -p /build/BUILD
+
+    # Copy generated files from parent directory to BUILD directory
+    echo 'Copying build artifacts to BUILD/...'
+    cp ../*.deb /build/BUILD/ 2>/dev/null || true
+    cp ../*.buildinfo /build/BUILD/ 2>/dev/null || true
+    cp ../*.changes /build/BUILD/ 2>/dev/null || true
+
     echo 'Build complete!'
   "
 
 echo ""
 echo "Build complete! Generated package location:"
-echo "  $PROJECT_DIR/../wifi-fixes-msi_*.deb"
+echo "  $PROJECT_DIR/BUILD/wifi-fixes-msi_*.deb"
 echo ""
 echo "To install on Debian/Ubuntu systems:"
-echo "  sudo dpkg -i ../wifi-fixes-msi_*.deb"
+echo "  sudo dpkg -i BUILD/wifi-fixes-msi_*.deb"
 echo ""
