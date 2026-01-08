@@ -1,0 +1,33 @@
+# Debian package build artifacts
+debian/files
+debian/.debhelper/
+debian/wifi-fixes-msi/
+debian/*.substvars
+debian/*.log
+debian/debhelper-build-stamp
+debian/tmp/
+
+# Package files
+*.deb
+*.rpm
+*.changes
+*.buildinfo
+*.dsc
+*.tar.gz
+*.tar.xz
+
+# RPM build directories (if built locally)
+rpmbuild/
+BUILD/
+RPMS/
+SRPMS/
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
