@@ -1,5 +1,5 @@
 #!/bin/bash
-# build-rpm.sh ###############################################################
+# build-rpm.sh ################################################################
 # Used to build the RPM package using distrobox and rpmbuild
 #
 # Author: Francis Villarba <hello@francisvillarba.com>

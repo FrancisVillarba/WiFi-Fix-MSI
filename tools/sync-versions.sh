@@ -1,5 +1,5 @@
 #!/bin/bash
-# generate-versions.sh ########################################################
+# sync-versions.sh ############################################################
 # Synchronies version numbers across CHANGELOG.md, rpm/wifi-fixes-msi.spec, 
 # and debian/control files
 # Ensures version information stays consistent across all distributions

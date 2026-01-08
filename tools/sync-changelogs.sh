@@ -1,5 +1,5 @@
 #!/bin/bash
-# generate-changelogs.sh ######################################################
+# sync-changelogs.sh ##########################################################
 # Generates debian/changelog and rpm/%changelog from CHANGELOG.md
 # Ensures all changelogs stay synchronised
 #

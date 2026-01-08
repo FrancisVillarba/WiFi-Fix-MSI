@@ -1,5 +1,5 @@
 #!/bin/bash
-# init.sh #####################################################################
+# init-rpm.sh #################################################################
 # Used to initialise the project and system dependencies to build etc.
 # 
 # Author: Francis Villarba <hello@francisvillarba.com>

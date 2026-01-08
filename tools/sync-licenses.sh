@@ -1,6 +1,6 @@
 #!/bin/bash
-# generate-licenses.sh ########################################################
-# Synchronies LICENSE file across rpm/wifi-fixes-msi.spec and debian/copyright
+# sync-licenses.sh ############################################################
+# Synchronises LICENSE file across rpm/wifi-fixes-msi.spec and debian/copyright
 # Ensures license information stays synchronised across distributions
 #
 # Author: Francis Villarba <hello@francisvillarba.com>
