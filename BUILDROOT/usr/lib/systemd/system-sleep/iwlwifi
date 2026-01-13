@@ -2,11 +2,11 @@
 
 case $1/$2 in
 	pre/*)
-	/usr/sbin/rfkill block wifi
-	/usr/sbin/modprobe --remove --quiet iwlmvm iwlmld iwlwifi &> /dev/null
+		/usr/sbin/rfkill block wifi
+		/usr/sbin/modprobe --remove --quiet iwlmvm iwlmld iwlwifi &> /dev/null
 	;;
 	post/*)
-	/usr/sbin/modprobe --quiet iwlwifi iwlmld iwlmvm
-	/usr/sbin/rfkill unblock wifi
+		/usr/sbin/modprobe --quiet iwlwifi iwlmld iwlmvm
+		/usr/sbin/rfkill unblock wifi
 	;;
 esac
