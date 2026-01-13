@@ -57,6 +57,30 @@ For my particular system, I simply did the following:
     systemctl reboot
     ```
 
+## Uninstall
+
+Causing problems? Or the driver is finally fixed? Uninstall by doing the following:
+
+1. Find the layered package name via listing 
+
+    ```sh
+    # 
+    rpm-ostree status
+    ```
+
+2. uninstall the layered package
+
+    ```sh
+    # This is example from my machine
+    rpm-ostree uninstall wifi-fixes-msi-1.0-1.x86_64
+    ```
+
+3. Reboot the system
+
+    ```sh
+    systemctl reboot
+    ```
+
 ## Changelog
 
 Please see [CHANGELOG.md](CHANGELOG.md) for full details
