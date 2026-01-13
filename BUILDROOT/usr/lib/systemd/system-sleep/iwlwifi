@@ -2,9 +2,10 @@
 
 case $1/$2 in
 	pre/*)
-	/usr/sbin/modprobe -r iwlmld iwlwifi
+	/usr/sbin/modprobe --remove --quiet iwlmvm iwlmld iwlwifi &> /dev/null
 	;;
 	post/*)
-	/usr/sbin/modprobe iwlwifi iwlmld
+	/usr/sbin/modprobe --quiet iwlwifi iwlmld iwlmvm
+	rfkill unblock all
 	;;
 esac
