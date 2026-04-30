@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0-1] - 2025-09-25
+
+### Added
+
+- WiFi configuration settings via modprobe.d for stability and
+  performance, at the cost of battery life.
+  - iwlwifi.conf: Disables power saving, enables firmware restart, enables 11ac/11ax/11be.
+  - iwlmld.conf: Sets power scheme to performance mode.
+- tools/init.sh script to initialize development environment with distrobox.
+- tools/build.sh script for automated RPM building using distrobox.
+
+### Changed
+
+- All references to iwlmvm changed to iwlmld to match Kernel 6.6+ driver changes
+  - [More Info](https://www.kernelconfig.io/config_iwlmld)
+- Repository structure: BUILDROOT reorganised from versioned subdirectories to a
+flat structure.
+- RPM spec file updated to copy files from simplified BUILDROOT structure and
+refactored to be more reliable and repeatable.
+- Build process streamlined with automated tools/build.sh script.
+- Package version incremented to 2.0 to reflect breaking changes.
+
 ## [1.0-2] - 2025-09-25
 
 ### Added
@@ -26,5 +48,6 @@ additional sources of information for the rest of the changes.
 
 - Initial Release.
 
+[2.0-1]: https://github.com/FrancisVillarba/wifi-fix-msi/releases/tag/v2.0-1
 [1.0-2]: https://github.com/FrancisVillarba/wifi-fix-msi/releases/tag/v1.0-2
 [1.0-1]: https://github.com/FrancisVillarba/wifi-fix-msi/releases/tag/v1.0-1

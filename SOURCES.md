@@ -15,3 +15,17 @@ A list of sources used to create the final solution
 [https://rpm-packaging-guide.github.io/](https://rpm-packaging-guide.github.io/)
 [https://jfearn.fedorapeople.org/en-US/RPM/4/html/RPM_Guide/ch09s06.html](https://jfearn.fedorapeople.org/en-US/RPM/4/html/RPM_Guide/ch09s06.html)
 [https://coreos.github.io/rpm-ostree/administrator-handbook/#administering-an-rpm-ostree-based-system](https://coreos.github.io/rpm-ostree/administrator-handbook/#administering-an-rpm-ostree-based-system)
+
+### WiFi Configuration Files
+
+#### iwlmld
+
+```sh
+modinfo --parameters iwlmld
+```
+
+#### iwlwifi
+
+```sh
+modinfo --parameters iwlmld
+```

@@ -2,11 +2,18 @@
 
 ## Summary
 
-systemd script that fixes sleep wake issues for Intel BE1750 Class WiFi cards
+systemd script and modprobe configurations that fixes sleep wake and performance
+/ reliability issues for Intel BE1750 Class WiFi cards.
+
+> [!NOTE]
+> These fixes are only intended to be temporary whilst work is being made by Intel
+and the OSS community to fix the underlying issues with the drivers.
 
 ## Description
 
-A simple package that contains a systemd script that runs before sleep and after wake in order to fix issues with iwlwifi driver crash looping when resuming from sleep on Intel BE1750 Class WiFi Cards.
+A simple package that contains a systemd script that runs before sleep and after
+wake in order to fix issues with iwlwifi driver crash looping when resuming from
+sleep on Intel BE1750 Class WiFi Cards.
 
 This was created and tested specifically with the MSI Stealth 16 AI A1VGG Notebook.
 
@@ -17,7 +24,7 @@ For details about the system this was built and tested for.
 - Notebook: MSI Stealth 16 AI
 - Notebook Model:  A1VGG
 - OS Image: bazzite-nvidia-open:stable
-- OS Release: Bazzite 41
+- OS Release: Bazzite 42
 - OS Base: Fedora Kinoite (Fedora Silverblue)
 - Wireless: Intel WiFi 7 BE1750 (802.11be) | 0000:2c:00.0
 
@@ -49,3 +56,7 @@ For my particular system, I simply did the following:
     ```sh
     systemctl reboot
     ```
+
+## Changelog
+
+Please see [CHANGELOG.md](CHANGELOG.md) for full details
